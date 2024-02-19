@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "macOS-ee",
+    "version": "1.0",
+    "description": "Enhance EE on macOS",
+    "content_scripts": [
+        {
+            "matches": ["https://code.earthengine.google.com/*"],
+            "js": ["content.js"],
+            "run_at": "document_idle",
+            "world": "MAIN"
+        }
+    ]
+}
