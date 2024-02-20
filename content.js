@@ -22,8 +22,15 @@ function setEditorPreferences() {
   }
 
   if (editor) {
-    editor.setWrapBehavioursEnabled(true);
-    editor.setShowPrintMargin(true);
+    editor.setOptions({
+      wrap: 80,
+      showPrintMargin: true,
+      printMarginColumn: 80,
+      wrapBehavioursEnabled: true,
+      behavioursEnabled: true,
+      cursorStyle: 'smooth',
+    });
+
     editor.commands.commands.Suggestion.bindKey.mac = 'Shift-Tab';
     editor.commands.commands.Save.bindKey.mac = 'Cmd-S';
     editor.commands.addCommands(editor.commands.commands);
